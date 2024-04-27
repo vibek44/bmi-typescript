@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "typescript bmi calculator",
   "scripts": {
-    "ts-node": "ts-node"
+    "ts-node": "ts-node",
+    "bmicalculator":"ts-node bmicalculator.ts"
   },
   "keywords": [
     "bmi"
