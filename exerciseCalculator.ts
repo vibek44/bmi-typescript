@@ -1,11 +1,11 @@
 interface exerciseResult {
-  periodLength:number,
-  trainingDays:number,
-  success:boolean,
-  rating:number,
-  ratingDescription:string,
-  target:number,
-  average:number
+  periodLength:number;
+  trainingDays:number;
+  success:boolean;
+  rating:number;
+  ratingDescription:string;
+  target:number;
+  average:number;
 }
 
 
@@ -20,13 +20,11 @@ const exerciseCalculator=(traingHours:number[],target:number):exerciseResult=>{
   ratingDescription:average>=target?'keep going great with consistent achievement':'not too bad try again',
   target,
   average
-
  }
-
 }
 
 try {
-  console.log(exerciseCalculator([2,6,0,4,3,2,6],3));
+  console.log(exerciseCalculator([2,6,0,4,3,2,4],3));
   
 } catch (error) {
   
