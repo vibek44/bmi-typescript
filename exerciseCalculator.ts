@@ -1,3 +1,5 @@
+import { isNotNumber } from "./utils/helper";
+
 interface exerciseResult {
   periodLength:number;
   trainingDays:number;
@@ -8,6 +10,23 @@ interface exerciseResult {
   average:number;
 }
 
+interface ReturnParseValues{
+  trainingHours:number[];
+  target:number
+}
+
+const parseArguments1=(args:string[]):ReturnParseValues=>{
+ 
+  if( args.length < 4 ) throw new Error('Not enough arguments')
+   const [, , ...rest]=args
+   const argument  =rest.map(el=>isNotNumber(el))
+   const [target, ...trainingHours]=argument
+   return{
+    trainingHours,
+    target
+   }
+     
+}
 
 const exerciseCalculator=(traingHours:number[],target:number):exerciseResult=>{
  let sum=traingHours.reduce((sum,currentElement)=>sum+currentElement)
@@ -24,8 +43,14 @@ const exerciseCalculator=(traingHours:number[],target:number):exerciseResult=>{
 }
 
 try {
-  console.log(exerciseCalculator([2,6,0,4,3,2,4],3));
-  
-} catch (error) {
+  //let [ , , ...rest]=process.argv 
+  const{trainingHours,target}=parseArguments1(process.argv)
+  //console.log(typeof target);
+  console.log(exerciseCalculator(trainingHours,target));
+} catch (error:unknown) {
+  if(error instanceof Error)
+  console.log(`Error : ${error.message}`);
   
 }
+
+
