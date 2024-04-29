@@ -4,7 +4,9 @@
   "description": "typescript bmi calculator",
   "scripts": {
     "ts-node": "ts-node",
-    "bmicalculator":"ts-node bmicalculator.ts"
+    "calculator":"ts-node calculator.ts",
+    "calculateBmi":"ts-node bmicalculator.ts",
+    "exerciseCalculator":"ts-node exerciseCalculator.ts"
   },
   "keywords": [
     "bmi"
