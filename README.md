@@ -6,4 +6,4 @@
 -type narrowing becomes important concept to reduces types such as any or unknown to certain specific type before applying javascript manipulation
 -typescript has its own native compiler called tsc but here in the project ts-node is used to compile the typescript codebase, which is also ts executing runtime
 -type annotations brings unique concept in typescript which bounds variable and function arguments to certain intended contract.
-- typescript let developer make static code analysis and tries to cut down the runtime error 
+- typescript let developer make static code analysis and tries to cut down the runtime error (variable and arguments typing) 
