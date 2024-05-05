@@ -1,0 +1,9 @@
+-this project is about following and interpreting typescript concept 
+-typescript is superset of javascript, which provide type features on top.
+-type in typescript is not limited to primitive types and objects and extends its type using type objects,interface and unions to create different customized data reqired
+- type is way of creating objects which is read only
+-interface is also way of creating objects with both read and write capacity
+-type narrowing becomes important concept to reduces types such as any or unknown to certain specific type before applying javascript manipulation
+-typescript has its own native compiler called tsc but here in the project ts-node is used to compile the typescript codebase, which is also ts executing runtime
+-type annotations brings unique concept in typescript which bounds variable and function arguments to certain intended contract.
+- typescript let developer make static code analysis and tries to cut down the runtime error 
